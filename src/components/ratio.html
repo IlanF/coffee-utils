@@ -6,14 +6,20 @@
 
     <div class="mt-4">
         <span class="text-sm font-medium">Base</span>
-        <div class="mt-3">
+        <div class="mt-3 space-x-2">
             <label class="">
                 <input type="radio" name="type" value="dose" class="peer hidden" x-model="type">
-                <span class="rounded-full bg-espresso-800 border border-espresso-600 px-4 py-2 peer-checked:bg-espresso-600">Dose</span>
+                <span class="rounded-full bg-espresso-800 border border-espresso-600 px-4 py-2 peer-checked:bg-espresso-600">
+                    <span class="me-1 -mt-0.5" data-lucide="weight"></span>
+                    Dose
+                </span>
             </label>
             <label class="">
                 <input type="radio" name="type" value="yield" class="peer hidden" x-model="type">
-                <span class="rounded-full bg-espresso-800 border border-espresso-600 px-4 py-2 peer-checked:bg-espresso-600">Yield</span>
+                <span class="rounded-full bg-espresso-800 border border-espresso-600 px-4 py-2 peer-checked:bg-espresso-600">
+                    <span class="me-1 -mt-0.5" data-lucide="coffee"></span>
+                    Yield
+                </span>
             </label>
         </div>
     </div>
@@ -72,4 +78,3 @@
         </p>
     </div>
 </section>
-<script type="module" src="/src/components/ratio.js"></script>

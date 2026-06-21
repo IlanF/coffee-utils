@@ -1,8 +1,14 @@
 import Alpine from 'alpinejs'
+import persist from '@alpinejs/persist'
 import { createIcons, icons } from 'lucide';
 import './style.css'
+import timer from './components/timer'
+import ratio from './components/ratio'
+import grindTime from './components/grind-time'
 
 window.Alpine = Alpine
+
+Alpine.plugin(persist)
 
 Alpine.data('coffeeTools', () => ({
     roundStep: 0.1,
@@ -19,6 +25,10 @@ Alpine.data('coffeeTools', () => ({
         return value.toFixed(decimals)
     }
 }))
+
+Alpine.data('coffeeTimer', timer)
+Alpine.data('coffeeRatio', ratio)
+Alpine.data('grindTime', grindTime)
 
 Alpine.start()
 
