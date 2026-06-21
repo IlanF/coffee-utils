@@ -1,0 +1,140 @@
+/* src/style.css */
+@import "tailwindcss";
+
+@theme {
+  /* App surfaces */
+  --color-background: oklch(14.5% 0.018 55);
+  --color-foreground: oklch(94% 0.018 75);
+
+  --color-card: oklch(19% 0.022 55);
+  --color-card-hover: oklch(23% 0.026 55);
+  --color-card-foreground: oklch(94% 0.018 75);
+
+  --color-popover: oklch(17% 0.02 55);
+  --color-popover-foreground: oklch(94% 0.018 75);
+
+  /* Muted text / subtle UI */
+  --color-muted: oklch(29% 0.025 55);
+  --color-muted-foreground: oklch(70% 0.025 72);
+
+  --color-border: oklch(30% 0.026 55);
+  --color-input: oklch(25% 0.026 55);
+  --color-ring: oklch(74% 0.13 65);
+
+  /* Primary: crema / caramel */
+  --color-primary: oklch(74% 0.13 65);
+  --color-primary-hover: oklch(79% 0.14 68);
+  --color-primary-foreground: oklch(16% 0.022 55);
+
+  /* Secondary: roasted brown */
+  --color-secondary: oklch(33% 0.055 55);
+  --color-secondary-hover: oklch(39% 0.065 55);
+  --color-secondary-foreground: oklch(91% 0.025 75);
+
+  /* Accent: slightly golden, good for results/highlights */
+  --color-accent: oklch(82% 0.12 82);
+  --color-accent-hover: oklch(87% 0.13 84);
+  --color-accent-foreground: oklch(17% 0.02 55);
+
+  /* Status colors */
+  --color-success: oklch(72% 0.13 145);
+  --color-success-foreground: oklch(14% 0.02 145);
+
+  --color-warning: oklch(78% 0.15 82);
+  --color-warning-foreground: oklch(18% 0.025 65);
+
+  --color-danger: oklch(66% 0.18 28);
+  --color-danger-foreground: oklch(96% 0.015 28);
+
+  /* Coffee palette */
+  --color-espresso-950: oklch(12% 0.018 55);
+  --color-espresso-900: oklch(16% 0.022 55);
+  --color-espresso-800: oklch(21% 0.026 55);
+  --color-espresso-700: oklch(27% 0.035 55);
+  --color-espresso-600: oklch(34% 0.05 55);
+
+  --color-mocha-500: oklch(43% 0.07 50);
+  --color-mocha-400: oklch(52% 0.08 52);
+  --color-mocha-300: oklch(63% 0.08 58);
+
+  --color-crema-500: oklch(74% 0.13 65);
+  --color-crema-400: oklch(80% 0.13 70);
+  --color-crema-300: oklch(86% 0.1 76);
+
+  --color-foam-200: oklch(91% 0.04 78);
+  --color-foam-100: oklch(96% 0.025 82);}
+
+[x-cloak] {
+  display: none !important;
+}
+
+svg.lucide {
+  @apply inline-block h-[1em] w-[1em];
+}
+
+@layer components {
+  .button {
+    @apply rounded-full bg-primary pl-4 pr-5 pt-2 pb-2.5 text-primary-foreground transition-colors;
+
+    &:disabled {
+      @apply opacity-50;
+    }
+
+    &:hover:not(:disabled) {
+      @apply bg-primary-hover;
+    }
+
+    & svg {
+      @apply -mt-0.5 me-1;
+    }
+  }
+
+
+  .card {
+    @apply rounded-3xl bg-card text-card-foreground p-5 shadow-sm border border-border;
+
+    & .card-title {
+      @apply text-lg font-semibold ;
+    }
+
+    & .card-description {
+      @apply mt-1 text-sm text-muted-foreground;
+    }
+  }
+
+  .display {
+    @apply font-mono rounded-2xl bg-primary p-4 text-primary-foreground text-4xl font-bold;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="password"],
+  input[type="email"],
+  select,
+  input[type="number"] {
+    @apply rounded-xl border border-border bg-input px-3 py-2 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-ring/40
+  }
+
+  .input-addon {
+    & {
+      @apply flex items-center;
+    }
+
+    & input:first-child {
+      @apply rounded-r-none;
+    }
+    & input:last-child {
+      @apply rounded-l-none;
+    }
+
+    & .addon {
+      @apply whitespace-nowrap rounded-xl border border-border bg-input px-3 py-2 text-muted-foreground font-mono
+    }
+    & .addon:first-child {
+      @apply border-r-0 rounded-r-none
+    }
+    & .addon:last-child {
+      @apply border-l-0 rounded-l-none
+    }
+  }
+}

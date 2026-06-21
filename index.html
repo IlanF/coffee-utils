@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Tools</title>
+    <meta name="description" content="Small offline coffee calculators" />
+    <meta name="theme-color" content="#f8f5f0" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+</head>
+<body class="bg-background text-foreground antialiased">
+
+<header class="bg-card text-card-foreground border-b border-border">
+    <div class="max-w-xl mx-auto px-4 py-6">
+        <h1 class="text-3xl font-bold tracking-tight flex items-center gap-2">
+            <span data-lucide="coffee"></span>
+            Coffee Tools
+        </h1>
+    </div>
+</header>
+
+<main
+        x-data="coffeeTools"
+        class="mx-auto max-w-xl space-y-5 px-4 py-6"
+>
+
+    {{> timer }}
+
+    {{> grind-time }}
+
+    {{> ratio }}
+</main>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

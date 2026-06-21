@@ -1,0 +1,26 @@
+<section class="card" x-data="coffeeTimer">
+    <h2 class="card-title">Shot Timer</h2>
+    <p class="card-description">
+        Start a timer for your shot.
+    </p>
+
+    <div class="mt-4 display">
+        <span x-text="format(time / 1000, 1)"></span>s
+    </div>
+
+    <div class="mt-5 space-x-2">
+        <button x-show="interval === null" :disabled="interval !== null" type="button" class="button" @click="start">
+            <span data-lucide="play"></span>
+            Start
+        </button>
+        <button x-show="time > 0 && interval !== null" :disabled="time <= 0 || interval === null" type="button" class="button" @click="stop">
+            <span data-lucide="pause"></span>
+            Stop
+        </button>
+        <button :disabled="time <= 0 || interval !== null" type="button" class="button" @click="reset">
+            <span data-lucide="refresh-cw"></span>
+            Reset
+        </button>
+    </div>
+</section>
+<script type="module" src="/src/components/timer.js"></script>
