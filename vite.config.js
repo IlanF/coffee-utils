@@ -25,8 +25,8 @@ export default defineConfig({
                 name: 'Coffee Tools',
                 short_name: 'Coffee',
                 description: 'Small offline coffee calculators',
-                theme_color: '#f8f5f0',
-                background_color: '#f8f5f0',
+                theme_color: '#100804',
+                background_color: '#100804',
                 display: 'standalone',
                 start_url: '/',
                 scope: '/',
@@ -40,12 +40,6 @@ export default defineConfig({
                         src: 'pwa-512x512.png',
                         sizes: '512x512',
                         type: 'image/png'
-                    },
-                    {
-                        src: 'pwa-512x512-maskable.png',
-                        sizes: '512x512',
-                        type: 'image/png',
-                        purpose: 'maskable'
                     }
                 ]
             },

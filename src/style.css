@@ -62,7 +62,8 @@
   --color-crema-300: oklch(86% 0.1 76);
 
   --color-foam-200: oklch(91% 0.04 78);
-  --color-foam-100: oklch(96% 0.025 82);}
+  --color-foam-100: oklch(96% 0.025 82);
+}
 
 [x-cloak] {
   display: none !important;
