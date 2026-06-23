@@ -142,4 +142,37 @@ svg.lucide {
       @apply border-l-0 rounded-l-none
     }
   }
+
+  .toggle-group {
+    & {
+      @apply relative flex items-center whitespace-nowrap overflow-y-hidden overflow-x-auto w-full;
+      scrollbar-width: none;
+    }
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+
+    & input {
+      @apply hidden;
+    }
+
+    & .toggle-label {
+      @apply align-middle inline-flex items-center gap-2 my-1 whitespace-nowrap bg-espresso-800 border border-espresso-600 px-4 py-2 ;
+    }
+
+    & input:checked + .toggle-label {
+      @apply bg-espresso-600;
+    }
+
+    & label + label .toggle-label {
+      @apply border-l-0 rounded-l-none;
+    }
+
+    & label:first-child .toggle-label {
+      @apply rounded-l-full;
+    }
+    & label:last-child .toggle-label {
+      @apply rounded-r-full;
+    }
+  }
 }

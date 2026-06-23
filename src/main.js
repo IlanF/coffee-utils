@@ -5,8 +5,7 @@ import './style.css'
 import timer from './components/timer'
 import ratio from './components/ratio'
 import grindTime from './components/grind-time'
-
-console.log(import.meta.env);
+import dialInHelper from './components/dial-helper'
 
 window.Alpine = Alpine
 
@@ -31,6 +30,7 @@ Alpine.data('coffeeTools', () => ({
 Alpine.data('coffeeTimer', timer)
 Alpine.data('coffeeRatio', ratio)
 Alpine.data('grindTime', grindTime)
+Alpine.data('dialInHelper', dialInHelper)
 
 Alpine.start()
 

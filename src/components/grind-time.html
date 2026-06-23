@@ -4,9 +4,9 @@
         Use when your timed grinder gives the wrong dose.
     </p>
 
-    <div class="mt-4 space-y-3 gap-3">
+    <div class="mt-4 flex  gap-3">
         <label class="space-y-1">
-            <span class="text-sm font-medium">Current time</span>
+            <span class="font-medium">Current Time</span>
             <span class="input-addon w-full">
                 <input
                         x-model.number="currentTime"
@@ -21,7 +21,7 @@
         </label>
 
         <label class="space-y-1">
-            <span class="text-sm font-medium">Actual ground weight</span>
+            <span class="font-medium">Actual Weight</span>
             <span class="input-addon w-full">
                 <input
                         x-model.number="actualWeight"
@@ -36,7 +36,7 @@
         </label>
 
         <label class="space-y-1">
-            <span class="text-sm font-medium">Desired weight</span>
+            <span class="font-medium">Desired Weight</span>
             <span class="input-addon w-full">
                 <input
                         x-model.number="desiredWeight"
@@ -52,7 +52,7 @@
     </div>
 
     <div class="mt-5 display">
-        <p class="text-sm text-primary-foreground">Set grinder to</p>
+        <p class="text-sm text-primary-foreground">Set Grinder To</p>
         <p class="text-4xl font-bold">
             <span x-text="format(correctedTime, 1)"></span>s
         </p>

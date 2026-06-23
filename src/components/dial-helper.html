@@ -1,0 +1,126 @@
+<section class="card" x-data="dialInHelper">
+    <h2 class="card-title">Dial In Helper</h2>
+    <p class="card-description">
+        Help dialing in the perfect cup of coffee.<br>
+        For best dialing results change only one setting at a time.<br>
+        When changing grind size you should purge 1-2g to remove any grinder retention.
+    </p>
+
+
+    <div class="mt-4">
+        <span class="font-medium">Time</span>
+        <div class="toggle-group">
+            <label class="">
+                <input type="radio" name="time" value="slow" x-model="time">
+                <span class="toggle-label">
+                    <span data-lucide="snail"></span>
+                    Slow
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="time" value="ok" x-model="time">
+                <span class="toggle-label">
+                    <span data-lucide="timer"></span>
+                    OK
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="time" value="fast" x-model="time">
+                <span class="toggle-label">
+                    <span data-lucide="zap"></span>
+                    Fast
+                </span>
+            </label>
+        </div>
+        <div class="mt-3 bg-muted rounded-xl px-4 py-2 text-muted-foreground text-sm">
+            A good shot runs in about 25-30 seconds for about 18g dose at 1:2 ratio.
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <span class="font-medium">Taste</span>
+        <div class="toggle-group">
+            <label class="">
+                <input type="radio" name="taste" value="good" x-model="taste">
+                <span class="toggle-label">
+                    <span data-lucide="badge-check"></span>
+                    Good
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="taste" value="sour" x-model="taste">
+                <span class="toggle-label">
+                    <span data-lucide="citrus"></span>
+                    Sour
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="taste" value="bitter" x-model="taste">
+                <span class="toggle-label">
+                    <span data-lucide="coffee"></span>
+                    Bitter
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="taste" value="weak" x-model="taste">
+                <span class="toggle-label">
+                    <span data-lucide="battery-low"></span>
+                    Weak
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="taste" value="harsh" x-model="taste">
+                <span class="toggle-label">
+                    <span data-lucide="triangle-alert"></span>
+                    Harsh
+                </span>
+            </label>
+        </div>
+        <div class="mt-3 bg-muted rounded-xl px-4 py-2 text-muted-foreground text-sm">
+            <span x-show="taste === 'weak'"><strong>Weak</strong> means low flavor concentration. It tastes diluted, empty, or like “coffee water.” Weak is about intensity, not texture. A shot can be weak but not thin, though often they appear together.</span>
+            <span x-show="taste === 'harsh'"><strong>Harsh</strong> means unpleasant aggression: rough, sharp, drying, scratchy, burnt, astringent, or throat-catching. Harsh is not the same as “strong.” Strong can be good. Harsh makes you wince.</span>
+            <span x-show="taste === 'bitter'"><strong>Bitter</strong> is a taste. Think dark cocoa, burnt sugar, grapefruit peel, over-steeped tea.</span>
+            <span x-show="taste === 'sour'"><strong>Sour</strong> is acidity that feels sharp or underdeveloped. Think lemony, salty, tart, green, or biting.</span>
+            <span x-show="taste === 'good'"><strong>Good</strong> has the falvours balanced, not too sour, not too bitter, just perfect.</span>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <span class="font-medium">Body</span>
+        <div class="toggle-group">
+            <label class="">
+                <input type="radio" name="body" value="thin" x-model="body">
+                <span class="toggle-label">
+                    <span data-lucide="feather"></span>
+                    Thin
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="body" value="ok" x-model="body">
+                <span class="toggle-label">
+                    <span data-lucide="circle-check"></span>
+                    OK
+                </span>
+            </label>
+            <label class="">
+                <input type="radio" name="body" value="heavy" x-model="body">
+                <span class="toggle-label">
+                    <span data-lucide="weight"></span>
+                    Heavy
+                </span>
+            </label>
+        </div>
+        <div class="mt-3 bg-muted rounded-xl px-4 py-2 text-muted-foreground text-sm">
+            <span x-show="body === 'thin'"><strong>Thin</strong> means the texture/body is missing. It feels watery, tea-like, hollow, or disappears quickly. It can still be flavorful, but the mouthfeel is light.</span>
+            <span x-show="body === 'heavy'"><strong>Heavy</strong> means the espresso feels dense, syrupy, coating, muddy, or cloying. Heavy is not automatically bad; some shots are pleasantly syrupy. It only becomes a problem if it feels too intense, muddy, or tiring.</span>
+            <span x-show="body === 'ok'"><strong>OK</strong> feels balanced and pleasant, with enough texture but not muddy or overwhelming.</span>
+        </div>
+    </div>
+
+    <div class="mt-5 display">
+        <p class="text-sm text-accent-foreground">Recommendation</p>
+        <p class="text-base">
+            <span x-text="recommendation"></span>
+        </p>
+    </div>
+</section>

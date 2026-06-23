@@ -12,8 +12,8 @@
 <body class="bg-background background-pattern text-foreground antialiased">
 
 <header class="bg-card text-card-foreground border-b border-border">
-    <div class="max-w-xl mx-auto px-4 py-6">
-        <h1 class="text-3xl font-bold tracking-tight flex items-center gap-2">
+    <div class="max-w-xl mx-auto px-4 py-2">
+        <h1 class="text-3xl  flex items-center gap-2">
             <img src="/icon-no-bg.svg" alt="Coffee Tools" class="h-14 w-14" />
             Coffee Tools
         </h1>
@@ -24,6 +24,7 @@
     {{> timer }}
     {{> grind-time }}
     {{> ratio }}
+    {{> dial-helper }}
 </main>
 
 <footer class="mt-5 max-w-xl mx-auto px-4 py-6 text-xs text-muted-foreground font-mono">
@@ -35,7 +36,7 @@
             <img height="36" class="h-8" src="/support_me_on_kofi_dark.png" alt="Buy Me a Coffee at ko-fi.com" />
         </a>
     </div>
-    <div class="mt-4 text-xs text-secondary-hover">Build Version %BUILD_VERSION%</div>
+    <div class="mt-4 text-xs text-secondary-hover">Build %BUILD_VERSION%</div>
 </footer>
 
 <script type="module" src="/src/main.js"></script>
