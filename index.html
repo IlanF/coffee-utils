@@ -9,12 +9,12 @@
     <meta name="theme-color" content="#f8f5f0" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 </head>
-<body class="bg-background text-foreground antialiased">
+<body class="bg-background background-pattern text-foreground antialiased">
 
 <header class="bg-card text-card-foreground border-b border-border">
     <div class="max-w-xl mx-auto px-4 py-6">
         <h1 class="text-3xl font-bold tracking-tight flex items-center gap-2">
-            <span data-lucide="coffee"></span>
+            <img src="/icon-no-bg.svg" alt="Coffee Tools" class="h-14 w-14" />
             Coffee Tools
         </h1>
     </div>
@@ -30,11 +30,12 @@
     <div class="border-t border-border pt-5">
         Built by Ilan Firsov with <span data-lucide="heart" class="inline-block fill-rose-500 stroke-transparent"></span> and lots of coffee.
     </div>
-    <div class="mt-2">
+    <div class="mt-3">
         <a href='https://ko-fi.com/U7U01NEAED' target='_blank'>
             <img height="36" class="h-8" src="/support_me_on_kofi_dark.png" alt="Buy Me a Coffee at ko-fi.com" />
         </a>
     </div>
+    <div class="mt-4 text-xs text-secondary-hover">Build Version %BUILD_VERSION%</div>
 </footer>
 
 <script type="module" src="/src/main.js"></script>

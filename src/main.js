@@ -6,6 +6,8 @@ import timer from './components/timer'
 import ratio from './components/ratio'
 import grindTime from './components/grind-time'
 
+console.log(import.meta.env);
+
 window.Alpine = Alpine
 
 Alpine.plugin(persist)

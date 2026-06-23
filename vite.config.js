@@ -2,8 +2,23 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import handlebars from "vite-plugin-handlebars";
+import { execSync } from 'node:child_process'
+
+function getGitVersion() {
+    try {
+        return execSync('git describe --tags --always --dirty', {
+            encoding: 'utf8',
+        }).trim()
+    } catch {
+        return 'unknown'
+    }
+}
 
 export default defineConfig({
+    define: {
+        'import.meta.env.BUILD_VERSION': JSON.stringify(getGitVersion()),
+    },
+
     plugins: [
         tailwindcss(),
         handlebars({

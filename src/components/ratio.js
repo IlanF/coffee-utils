@@ -10,15 +10,11 @@ export default function() {
                 return 0
             }
 
-            return this.dose * this.ratio
-        },
-
-        get reverseDose() {
-            if (!this.output || !this.ratio) {
-                return 0
+            if (this.type === 'yield') {
+                return this.output / this.ratio
             }
 
-            return this.output / this.ratio
-        },
+            return this.dose * this.ratio
+        }
     }
 };

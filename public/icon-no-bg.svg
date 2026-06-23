@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 100 100">
+    <defs>
+        <radialGradient id="a" cx="30%" cy="20%" r="120%">
+            <stop offset="0" stop-color="#332215"/>
+            <stop offset="1" stop-color="#0f0603"/>
+        </radialGradient>
+        <radialGradient id="b" cx="50%" cy="50%" r="55%">
+            <stop offset="0" stop-color="#e39849" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#e39849" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="c">
+            <path d="M50 29 C58.5 29.5 64.5 39 65 49 C65.5 61 59 72 50 72 C41 72 34.5 61 35 49 C35.5 39 41.5 29.5 50 29 Z"/>
+        </clipPath>
+    </defs>
+    <circle cx="50" cy="50" r="31" fill="none" stroke="#e39849" stroke-dasharray="2 7.6" stroke-linecap="round" stroke-width="3.4"/>
+    <path fill="#33200f" d="M50 29 C58.5 29.5 64.5 39 65 49 C65.5 61 59 72 50 72 C41 72 34.5 61 35 49 C35.5 39 41.5 29.5 50 29 Z" transform="rotate(-22 50 50)"/>
+    <g clip-path="url(#c)" transform="rotate(-22 50 50)">
+        <path fill="#a86c3a" d="M48.5 29 C43.5 39 53.5 51 47.5 60 C44.5 64 49 68 48.5 72 C38 73 30 62 30 49 C30 37 38 28 48.5 29 Z"/>
+        <path fill="#6f4626" d="M51.5 29 C46.5 39 56.5 51 50.5 60 C47.5 64 52 68 51.5 72 C62 73 70 62 70 49 C70 37 62 28 51.5 29 Z"/>
+        <path fill="#c1854a" d="M44 33 C39 39 38 50 41 58 C36 52 36 40 44 33 Z" opacity=".8"/>
+        <ellipse cx="42" cy="40" fill="#dba059" opacity=".85" rx="3" ry="5.5" transform="rotate(18 42 40)"/>
+    </g>
+</svg>
